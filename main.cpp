@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "Line.hpp"
+#include "MatrixObject.hpp"
 
 int main() {
     std::vector<unsigned> sizes = {3, 3, 8};
