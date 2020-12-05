@@ -3,4 +3,4 @@ project(iterpretMatrixLang)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(iterpretMatrixLang main.cpp Line.cpp Line.h)
+add_executable(iterpretMatrixLang main.cpp Line.hpp)
