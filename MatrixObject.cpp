@@ -4,8 +4,6 @@
 
 #include "MatrixObject.hpp"
 
-#include <utility>
-
 Object Object::_create_matrix(int iter, std::vector<unsigned> in_sizes) {
     if (iter == 1) {
         Object obj((std::size_t(in_sizes[in_sizes.size() - 1])));
@@ -25,7 +23,7 @@ Object Object::_create_matrix(int iter, std::vector<unsigned> in_sizes) {
 
 void Object::_calc_indices_array(std::vector<unsigned int> & indarr, unsigned index) {
     unsigned val = 0;
-    for (int i = sizes.size() - 1; i >= 0; --i) {
+    for (int i = static_cast<int>(sizes.size() - 1); i >= 0; --i) {
         val = index % sizes[i];
         indarr.push_back(val);
         index = (index - val) / sizes[i];
